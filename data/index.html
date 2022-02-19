@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="style.css">
+	<title>スマートリモコン</title>
+</head>
+
+<body>
+
+室温: <span id="getTempResult"></span>℃<br>
+<button id="getTempButton">更新</button><hr>
+
+<form id="sendIrForm">
+	運転: <select name="power">
+		<option value="off">オフ</option>
+		<option selected value="on">オン</option>
+	</select><br>
+	モード: <select name="mode">
+		<option selected value="auto">自動</option>
+		<option value="cool">冷房</option>
+		<option value="heat">暖房</option>
+		<option value="dry">ドライ</option>
+		<option value="fan">送風</option>
+	</select><br>
+	温度: <select name="temp">
+		<option value="30">30</option>
+		<option value="29">29</option>
+		<option value="28">28</option>
+		<option value="27">27</option>
+		<option value="26">26</option>
+		<option value="25">25</option>
+		<option selected value="24">24</option>
+		<option value="23">23</option>
+		<option value="22">22</option>
+		<option value="21">21</option>
+		<option value="20">20</option>
+		<option value="19">19</option>
+		<option value="18">18</option>
+	</select>℃<br>
+	風量: <select name="fan">
+		<option selected value="auto">自動</option>
+		<option value="level1">■□□□□</option>
+		<option value="level2">■■□□□</option>
+		<option value="level3">■■■□□</option>
+		<option value="level4">■■■■□</option>
+		<option value="level5">■■■■■</option>
+		<option value="silent">しずか</option>
+	</select><br>
+	風向: <select name="swing">
+		<option selected value="swing">スイング</option>
+		<option value="up">0°</option>
+		<option value="upmiddle">15°</option>
+		<option value="middle">30°</option>
+		<option value="downmiddle">45°</option>
+		<option value="down">60°</option>
+	</select><br>
+</form>
+<button id="sendIrButton">送信</button> <span id="sendIrResult"></span><br>
+
+<script src="main.js"></script>
+
+</body>
+</html>
