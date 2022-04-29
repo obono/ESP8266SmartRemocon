@@ -24,14 +24,16 @@
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
-#include <ESP8266mDNS.h>
 #include <ESP8266HTTPUpdateServer.h>
+#include <ESP8266mDNS.h>
 #include <FS.h>
-#include <IRsend.h>
-#include <DaikinHeatpumpARC480A14IR.h>
-#include <Wire.h>
 #include <uri/UriBraces.h>
 #include <uri/UriRegex.h>
+
+#include <IRsend.h>
+#include <DaikinHeatpumpARC480A14IR.h>
+
+#include <Wire.h>
 #include <Adafruit_BMP280.h>
 
 #include "credential.h"
