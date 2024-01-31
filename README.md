@@ -51,7 +51,7 @@ The base URL is http://myesp8266.local:8080 as default and the method of each AP
 
 ## Software ![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)
 
-### Build enviroment
+### Build environment
 
 Clone the source code and open the project file "ESP8266SmartRemocon.ino" with Arduino IDE.
 
