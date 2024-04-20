@@ -38,7 +38,7 @@
 
 #include "credential.h"
 
-#define BUILD_VERSION       "0.1.0"
+#define BUILD_VERSION       "0.2.0"
 #define BUILD_DATETIME      __DATE__ " " __TIME__
 
 #define PIN_IRSEND          12
@@ -298,10 +298,16 @@ static void handleIRGeneric(void)
     }
 }
 
-static void handleTemp(void)
+static void handleTemperature(void)
 {
     float temp = pBmp->readTemperature();
     httpServer.send(HTTP_OK, F(MIMETYPE_TEXT), String(temp));
+}
+
+static void handlePressure(void)
+{
+    float press = pBmp->readPressure();
+    httpServer.send(HTTP_OK, F(MIMETYPE_TEXT), String(press));
 }
 
 static void handleVersion(void)
@@ -364,7 +370,8 @@ void setup(void)
     httpUpdater.setup(&httpServer);
     httpServer.on(F("/ir/aircon"), handleIRAirCon);
     httpServer.on(UriRegex("^\\/ir\\/([a-z]+)$"), handleIRGeneric);
-    httpServer.on(F("/temp"), handleTemp);
+    httpServer.on(F("/temp"), handleTemperature);
+    httpServer.on(F("/press"), handlePressure);
     httpServer.on(F("/version"), handleVersion);
     httpServer.on(UriBraces("/{}"), handleRoot);
     httpServer.onNotFound(handleNotFound);

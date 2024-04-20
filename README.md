@@ -15,7 +15,8 @@ The base URL is http://myesp8266.local:8080 as default and the method of each AP
 |/ir/sony?value=...&bits=...&repeat=...                 |Send IR signal for Sony devices             |
 |/ir/panasonic?value=...&bits=...&repeat=...            |Send IR signal for Panasonic devices        |
 |/ir/nec?value=...&bits=...&repeat=...                  |Send IR signal for NEC devices              |
-|/temp                                                  |Get temperature in celsius                  |
+|/temp                                                  |Get temperature in Celsius                  |
+|/press                                                 |Get pressure in Pascals                     |
 |/version                                               |Get version information                     |
 
 * Available query parameters
