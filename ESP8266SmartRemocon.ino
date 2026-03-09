@@ -334,7 +334,7 @@ void setup(void)
     /*  Connect to Access Point  */
     WiFi.mode(WIFI_STA);
 #ifdef STATIC_ADDRESS
-    WiFi.config(staticIP, subnet, gateway, dns);
+    WiFi.config(staticIP, gateway, subnet, dns);
 #endif
     WiFi.begin(STA_SSID, STA_PASSWORD);
     while (WiFi.waitForConnectResult() != WL_CONNECTED) {
